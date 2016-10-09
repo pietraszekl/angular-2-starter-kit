@@ -1,0 +1,38 @@
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+    <a href="0#" class="navbar-brand">My Angular2 App </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="col-xs-4">
+    <div *ngIf="users" class="form-group">
+      <ul class="list-group users-list">
+        <li class="list-group-item"
+        *ngFor="let user of users"
+        value="{{user.id}}"
+        (click)="selectUser(user)"
+        [class.active]="user === activeUser">
+          {{ user.name }} ({{ user.username }})
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-8">
+    <div  class="jumbotron">
+    <div *ngIf="activeUser">
+      <h1>{{ message }} {{activeUser.name}}</h1>
+      <input class="form-control" [(ngModel)]="activeUser.name"/>
+      </div>
+      <div *ngIf="!activeUser">
+      <h2><span class="glyphicon glyphicon-hand-left"></span> Choose user</h2>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="text-center">
+  Copyright &copy; 2016
+</footer>
