@@ -21,15 +21,9 @@
     </div>
   </div>
   <div class="col-xs-8">
-    <div  class="jumbotron">
-    <div *ngIf="activeUser">
-      <h1>{{ message }} {{activeUser.name}}</h1>
-      <input class="form-control" [(ngModel)]="activeUser.name"/>
-      </div>
-      <div *ngIf="!activeUser">
-      <h2><span class="glyphicon glyphicon-hand-left"></span> Choose user</h2>
-      </div>
-    </div>
+
+    <user-profile [user]="activeUser"></user-profile>
+
   </div>
 </main>
 
