@@ -11,9 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+var app_routing_1 = require('./app.routing');
 var app_component_1 = require('./app.component');
 var user_profile_component_1 = require('./users/user-profile.component');
 var user_form_component_1 = require('./users/user-form.component');
+var home_component_1 = require('./home/home.component');
+var about_component_1 = require('./about/about.component');
+var contact_component_1 = require('./contact/contact.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,12 +25,16 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                forms_1.FormsModule
+                forms_1.FormsModule,
+                app_routing_1.appRouting
             ],
             declarations: [
                 app_component_1.AppComponent,
                 user_profile_component_1.UserProfileComponent,
-                user_form_component_1.UserFormComponent
+                user_form_component_1.UserFormComponent,
+                home_component_1.HomeComponent,
+                about_component_1.AboutComponent,
+                contact_component_1.ContactComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
