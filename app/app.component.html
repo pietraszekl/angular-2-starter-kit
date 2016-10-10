@@ -7,7 +7,7 @@
 </header>
 
 <main>
-  <div class="col-xs-4">
+  <div class="col-sm-4">
     <div *ngIf="users" class="form-group">
       <ul class="list-group users-list">
         <li class="list-group-item"
@@ -19,8 +19,9 @@
         </li>
       </ul>
     </div>
+    <user-form (userCreated)="onUserCreated($event)" ></user-form>
   </div>
-  <div class="col-xs-8">
+  <div class="col-sm-8">
 
     <user-profile [user]="activeUser"></user-profile>
 

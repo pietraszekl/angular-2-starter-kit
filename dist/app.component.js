@@ -14,12 +14,15 @@ var AppComponent = (function () {
         this.message = "Welcome ";
         this.users = [
             { id: 1, name: "Lukasz", username: "pietraszekl" },
-            { id: 2, name: "Mark", username: "tomtom" },
-            { id: 3, name: "Tom", username: "markone" }
+            { id: 2, name: "Mark", username: "markone" },
+            { id: 3, name: "Tom", username: "tomtom" }
         ];
     }
     AppComponent.prototype.selectUser = function (user) {
         this.activeUser = user;
+    };
+    AppComponent.prototype.onUserCreated = function (event) {
+        this.users.push(event.user);
     };
     AppComponent = __decorate([
         core_1.Component({

@@ -4,7 +4,7 @@ import { User } from '../shared/models/user';
 @Component({
   selector: 'user-profile',
   template: `
-  <div  class="jumbotron">
+  <div class="jumbotron">
     <div *ngIf="user">
       <h1>{{ message }} {{user.name}}</h1>
       <input class="form-control" [(ngModel)]="user.name"/>

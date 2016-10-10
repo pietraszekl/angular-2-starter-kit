@@ -20,7 +20,7 @@ var UserProfileComponent = (function () {
     UserProfileComponent = __decorate([
         core_1.Component({
             selector: 'user-profile',
-            template: "\n  <div  class=\"jumbotron\">\n    <div *ngIf=\"user\">\n      <h1>{{ message }} {{user.name}}</h1>\n      <input class=\"form-control\" [(ngModel)]=\"user.name\"/>\n    </div>\n    <div *ngIf=\"!user\">\n      <h2><span class=\"glyphicon glyphicon-hand-left\"></span> Choose user</h2>\n    </div>\n  </div>\n  "
+            template: "\n  <div class=\"jumbotron\">\n    <div *ngIf=\"user\">\n      <h1>{{ message }} {{user.name}}</h1>\n      <input class=\"form-control\" [(ngModel)]=\"user.name\"/>\n    </div>\n    <div *ngIf=\"!user\">\n      <h2><span class=\"glyphicon glyphicon-hand-left\"></span> Choose user</h2>\n    </div>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], UserProfileComponent);
