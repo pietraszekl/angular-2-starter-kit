@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { User } from './shared/models/user';
+import { User } from '../shared/models/user';
 
 @Component({
   selector: 'home-page',
   styles: [`.users-list li {cursor:pointer}`],
   template: `
-    this is home page
-      <div class="col-sm-4">
+    <div class="col-sm-4">
     <div *ngIf="users" class="form-group">
       <ul class="list-group users-list">
         <li class="list-group-item"
