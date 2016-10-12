@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from '../shared/models/user';
+import { UsersList } from '../shared/users-list';
 
 @Component({
   selector: 'home-page',
@@ -28,12 +29,8 @@ import { User } from '../shared/models/user';
 })
 
 export class HomeComponent {
-message = "Welcome "
-  users:User[] = [
-    {id: 1, name: "Lukasz", username: "pietraszekl"},
-    {id: 2, name: "Mark", username: "markone"},
-    {id: 3, name: "Tom", username: "tomtom"}
-  ]
+  message = "Welcome "
+  users = UsersList;
   activeUser:User;
   selectUser(user){
     this.activeUser = user
