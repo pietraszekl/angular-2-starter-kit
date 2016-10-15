@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UsersList } from '../shared/users-list';
+import { User } from '../shared/models/user';
+import { UserService } from '../shared/services/user.service';
 
 @Component({
   styles: [`
@@ -14,25 +15,17 @@ import { UsersList } from '../shared/users-list';
     <h1>{{user.name}} ({{user.username}})</h1>
     <img [src]="user.avatar" class="img-responsive img-circle" alt="">
     </div>
-  
   `
 })
 
 export class AboutUserComponent implements OnInit{
-  user;
+  user: User;
 
-  constructor(private route: ActivatedRoute){
-
-  }
+  constructor(private route: ActivatedRoute, private userService: UserService){}
 
   ngOnInit(){
     let username = this.route.snapshot.params['username'];
 
-    this.user = UsersList.find(function(user){
-      return user.username === username;
-
-    });
-
+    this.userService.getUser(username).then(user => this.user = user );
   }
-
 }
